@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Page and Data Per Page you would like to view</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(165, 162, 162);
+    }
+
+   h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #00134e;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #77b5f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(8, 2, 62, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #5a20ec;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0242764c;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Enter Pages and Data Per Page</h1>
+  <form method="get" action="/api/profile/data">
+    <label for="page">Page:</label>
+    <input type="text" id="page" placeholder="page number" name="page">
+    <label for="perPage">Per Page:</label>
+    <input type="text" id="perPage" placeholder="data per page" name="perPage">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

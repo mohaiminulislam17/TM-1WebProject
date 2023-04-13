@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table</title>
+  <style>
+      table {
+            border-collapse: collapse;
+            margin: auto;
+            font-size: large;
+            width: 10%;
+        }
+       
+        h1 {
+            text-align: center;
+            color: rgb(6, 6, 164);
+        }
+       
+        th,
+        td {
+            border: 4px solid rgb(17, 17, 76);
+            border-collapse: collapse;
+        }
+       
+        tr:hover td {
+            background: goldenrod;
+        }
+       
+        th {
+            padding: 7px;
+            background-color: #8981e6;
+        }
+       
+        td {
+            padding: 7px;
+            background-color: #6365e7;
+        }
+
+  </style>
+</head>
+<body>
+  <h1>Shipwreck Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Record</th>
+        <th>Vessel Terms</th>
+        <th>Feature Type</th>
+        <th>Chart</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Quality</th>
+        <th>Depth</th>
+        <th>Sounding Type</th>
+        <th>History</th>
+        <th>Quasou</th>
+        <th>Water Level</th>
+        <th>Coordinates</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(item => { %>
+        <tr>
+          <td><%= item._id %></td>
+          <td><%= item.recrd %></td>
+          <td><%= item.vesslterms %></td>
+          <td><%= item.feature_type %></td>
+          <td><%= item.chart %></td>
+          <td><%= item.latdec %></td>
+          <td><%= item.londec %></td>
+          <td><%= item.gp_quality %></td>
+          <td><%= item.depth %></td>
+          <td><%= item.sounding_type %></td>
+          <td><%= item.history %></td>
+          <td><%= item.quasou %></td>
+          <td><%= item.watlev %></td>
+          <td><%= item.coordinates %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
